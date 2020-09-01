@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>CovCare-COVID19 Detection</title>
+	  <link rel="stylesheet" type="text/css" href="static/style.css">
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="header">
+	<img src="static/images/logo.png" alt="Logo" id="im1">
+  <h1>CovCare</h1>
+  <p>COVID-19 detection and guidance</p>
+</div>
+	<div>
+	<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+	    <a class="navbar-brand" href="#">
+	    <img src="static/images/logo.jpg" alt="Logo" style="width:40px;"></a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="faq.html">FAQS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="guide.html">Guidelines</a>
+    </li>
+  </ul>
+</nav>
+</div>
+<div class="col1">
+<h1> COVID-19 FAQs</h1>
+</div>
+<div class="container">
+<button class="accordion">What is corona virus?</button>
+<div class="panel">
+  <p>Corona viruses are a large family of viruses which may cause illness
+	in animals or humans. In humans, several coronaviruses are known
+	to cause respiratory infections ranging from the common cold to more
+	severe diseases such as Middle East Respiratory Syndrome (MERS)
+	and Severe Acute Respiratory Syndrome (SARS). The most recently
+	discovered coronavirus causes coronavirus disease COVID-19.</p>
+</div>
+
+<button class="accordion">What is COVID-19?</button>
+<div class="panel">
+  <p>COVID-19 is the infectious disease caused by the most recently
+	discovered corona virus. This new virus and disease were unknown
+	before the outbreak began in Wuhan, China, in December 2019.</p>
+</div>
+
+<button class="accordion">What are the symptoms of COVID-19?</button>
+<div class="panel">
+  <p>The most common symptoms of COVID-19 are fever, tiredness, and
+	dry cough. Some patients may have aches and pains, nasal
+	congestion, runny nose, sore throat or diarrhea. These symptoms are
+	usually mild and begin gradually. Some people become infected but
+	don’t develop any symptoms and don't feel unwell. Most people
+	(about 80%) recover from the disease without needing special
+	treatment. Around 1 out of every 6 people who gets COVID-19
+	becomes seriously ill and develops difficulty breathing. Older people,
+	and those with underlying medical problems like high blood pressure,
+	heart problems or diabetes, are more likely to develop serious illness.
+	People with fever, cough and difficulty breathing should seek medical
+	attention.</p>
+</div>
+<button class="accordion">How does COVID-19 spread?</button>
+<div class="panel">
+  <p>People can catch COVID-19 from others who have the virus. The
+	disease can spread from person to person through small droplets from
+	the nose or mouth which are spread when a person with COVID-19
+	coughs or exhales. These droplets land on objects and surfaces
+	around the person. Other people then catch COVID-19 by touching
+	these objects or surfaces, then touching their eyes, nose or mouth.
+	People can also catch COVID-19 if they breathe in droplets from a
+	person with COVID-19 who coughs out or exhales droplets. This is
+	why it is important to stay more than 1 meter (3 feet) away from a
+	person who is sick.</p>
+</div>
+<button class="accordion">Can the virus that causes COVID-19 be transmitted through the air?</button>
+<div class="panel">
+  <p>Studies to date suggest that the virus that causes COVID-19 is mainly
+	transmitted through contact with respiratory droplets rather than
+	through the air. See previous answer on “How does COVID-19
+	spread?”</p>
+</div>
+<button class="accordion">Can CoVID-19 be caught from a person who has no symptoms?</button>
+<div class="panel">
+  <p>The main way the disease spreads is through respiratory droplets
+	expelled by someone who is coughing. The risk of catching COVID-19
+	from someone with no symptoms at all is very low. However, many
+	people with COVID-19 experience only mild symptoms. This is
+	particularly true at the early stages of the disease. It is therefore
+	possible to catch COVID-19 from someone who has, for example, just
+	a mild cough and does not feel ill.</p>
+</div>
+<button class="accordion">What can I do to protect myself and prevent the spread of
+disease?</button>
+<div class="panel">
+  <p><a href="guide.html">For prevention and further guidelines visit this page<a></p>
+</div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("activ");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>

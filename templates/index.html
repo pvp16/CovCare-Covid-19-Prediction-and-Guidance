@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>CovCare-COVID19 Detection</title>
+	  <link rel="stylesheet" type="text/css" href="static/style.css">
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="header">
+	<img src="static/images/logo.png" alt="Logo" id="im1">
+  <h1>CovCare</h1>
+  <p>COVID-19 detection and guidance</p>
+</div>
+	<div>
+	<nav class="navbar navbar-expand-sm navbar-dark">
+	    <a class="navbar-brand" href="#">
+	    <img src="static/images/logo.jpg" alt="Logo" style="width:40px;"></a>
+
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="faq.html">FAQS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="guide.html">Guidelines</a>
+    </li>
+  </ul>
+</nav>
+</div>
+
+	
+
+	<div class="row">
+  <div class="column">
+    <h2>COVID-19</h2>
+   <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness. COVID-19 detection can be done through screening Chest X-Ray scans, its cheaper and faster than getting tested through test kits.
+	</p>
+  </div>
+  <div class="column">
+    	<h1> COVID-19 Detection</h1>
+	<h3>Upload your chest X-ray</h3>
+		<form method="POST" action="/pred" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="exampleFormControlFile1">X-ray image</label>
+    <input type="file" class="form-control-file" name="userfile" id="exampleFormControlFile1" placeholder="Your Image">
+    <button type="submit" class="btn btn-outline-light btn-lg">Submit</button>	
+  </div>
+</form>
+	{% if result %}
+	<div class="scan">
+		<div class="row padding">
+			<div class="col-lg-4 col-sm-6"><div class="thumbnail">
+				<img src="{{result['image']}}" style="width:300px">
+			</div></div>
+			<div class="col-lg-6">
+				<h3>Prediction : <strong> {{result['prediction']}} </strong></h3>
+				<h4> Please visit <a href="guide.html">this page </a>for further guidelines </h4>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+</div>
+</body>
+</html>

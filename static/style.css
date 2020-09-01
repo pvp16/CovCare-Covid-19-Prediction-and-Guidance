@@ -1,0 +1,128 @@
+.header {
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px;
+  color: white;
+}
+#im1{
+	width:100px;
+	float:left;
+	padding-right: 20px;
+}
+#im2{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+body{
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("images/corona-5401250_1920.jpg");
+  background-size: cover;
+	background-size: 1920px 1080px;
+}
+.navbar {
+    min-height: 100px;
+    background-color: rgba(0,0,0,0.6);
+
+}
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+
+input[type=file] {
+  width: 100%;
+  
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  color: white;
+  padding-left: 2em;
+  line-height: 2em;
+  height: 650px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.5);
+}
+[class*="col-"] {
+    padding: 1rem;
+}
+
+.accordion {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  cursor: pointer;
+  padding: 30px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.4s;
+
+}
+
+.activ, .accordion:hover {
+  background-color: rgba(26, 0, 121,.8);
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.activ:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 30px;
+  background-color: rgb(33, 0, 83,0.9);
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  text-align: left;
+}
+.col1{
+  padding-top: 1%;
+  color: white;
+  text-align: center;
+}
+.container{
+  padding-top: 1%;
+  text-align: center;
+  
+}
+#im3{
+  width: 30%
+}
+#im4{
+  width: 30%
+}
+#im5{
+  width: 30%
+}
+.con3{
+  color: white;
+  font-size: 20px;
+  width: 95%;
+  padding-right: 1em;
+  background-color: rgba(0,0,0,0.8);
+  line-height: 2.5em;
+  margin: 40px;
+}
+.con2{
+  padding-left: 10em;
+}
